@@ -3,6 +3,12 @@ h1 a {
     font-family: 'Lobster';
 }
 
+
+head.Buttons {
+    background: #ff9400;
+    padding-left: 15px;
+}
+
 body {
     padding-left: 15px;
 }
