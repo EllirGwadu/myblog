@@ -1,4 +1,4 @@
 .idea/
-__pycache__/
+/blog/__pycache__/
 db.sqlite3
 *.pyc

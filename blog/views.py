@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
-from .models import Post
+from .models import Post, Comments
 
 
 def post_list(request):
@@ -9,5 +9,10 @@ def post_list(request):
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    return render(request, 'blog/post_detail.html', {'post': post})
+    comments1 = Comments.objects.filter(comments_post_id=pk)
+    #comments = Comments.objects.all()
+    print('test')
+    print(comments1)
+    print('test')
+    return render(request, 'blog/post_detail.html', {'post': post, 'comments': comments1})
 

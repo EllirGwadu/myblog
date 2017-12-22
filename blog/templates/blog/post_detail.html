@@ -10,4 +10,8 @@
         <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
+    <p>Comments:</p>
+        {% for comment in comments %}
+            <p>Комментарий: {{ comment.comments_text }}</p>
+        {% endfor %}
 {% endblock %}
